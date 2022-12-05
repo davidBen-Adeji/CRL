@@ -1,0 +1,380 @@
+/*1 | Oswald Bold - font-size: 18px;
+4 | Oswald Bold - font-size: 24px;
+8 | Oswald Bold - font-size: 24px;
+5 | Oswald Bold - font-size: 30px;
+ Monserrat Regular - font-size: 18px
+7 | Oswald Bold - font-size: 30px;
+ Monserrat Regular - font-size: 18px
+6 | Oswald Bold - font-size: 36px;
+ Monserrat Regular - font-size: 21px
+9 | Oswald Bold - font-size: 21px;
+ Monserrat Regular - font-size: 16px
+2 | Oswald Bold - font-size: 90px;
+3 | Montserrat Regular - font-size: 24px;
+
+COLOURS
+very dark #2e323f
+light dark #3b4050
+grey #6f737f
+white
+brown #a59678
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2, h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+header{
+    background-color: #2e323f;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger{
+    width: 50%;
+    /* position: relative; */
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    background-color: white;
+    margin: 0 auto;
+    height: 3px;
+    display: block;
+}
+
+.hamburger::before, .hamburger::after{
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before{
+    transform: translateY(-6px);
+}
+
+.hamburger::after{
+    transform: translateY(3px);
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    /* position: absolute; */
+    font-size: 1rem;
+}
+
+.nav-visible {
+    visibility: visible;
+    height: auto;
+    /* position: relative; */
+}
+
+.nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list{
+    margin-top: 15px;
+}
+
+.nav-link{
+    font-family: 'Oswald', sans-serif;
+    /* font-weight: 700; */
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-link:hover, .nav-link:focus{
+    opacity: .75;
+}
+
+.nav-link__styled{
+    background-color: #a59678;
+    padding: .3em 2em;
+    border-radius: 100px;
+}
+
+.hero{
+    margin: 0;
+    background-color: #3b4050;
+    padding: 3em 0;
+}
+
+.hero-title{
+    color: #a59678;
+    margin: 0;
+}
+
+.hero-title span{
+    color: white;
+}
+
+.hero-text{
+    color: white;
+}
+
+.hero-link{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #a59678;
+    padding: .4em 2em;
+    border-radius: 100px;
+    display: inline-block;
+    margin-top: .5em;
+}
+
+.hero-link:hover, .hero-link:focus{
+    opacity: .75;
+}
+
+.main h2{
+    color: #a59678;
+}
+
+.first-section{
+    background-color: #f1f1f1;
+    padding: 2em 0;
+}
+
+.first-section p{
+    font-size: 1.125rem;
+}
+
+.first-section h2{
+    font-size: 1.875rem;
+}
+
+.second-section__a h2{
+    font-size: 2.25rem;
+}
+
+.second-section__a p{
+    font-size: 1.3125rem;
+}
+
+.first-p{
+    margin-bottom: 2em;
+}
+
+.second-p{
+    margin-top: 2em;
+}
+
+.second-section{
+    padding: 2em 0;
+}
+
+.second-section__b h2{
+    color: white;
+    font-size: 1.875rem;
+}
+
+.second-section__b .article{
+    background-color: #3b4050;
+    text-align: center;
+    color: white;
+    padding: .2em .5em;
+}
+
+.article + .article{
+    margin-top: 1.5em;
+}
+
+.article p{
+    font-size: 1.3125rem;
+}
+
+.footer{
+    background-color: #3b4050;
+    padding: 2em 0;
+}
+
+.footer h2{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.footer h3{
+    font-size: 1.3125rem;
+    color: #a59678;
+}
+
+.footer p , .footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content li + li{
+    margin-top: 20px;
+}
+
+.footer a:hover, .footer a:focus{
+    opacity: .75;
+}
+
+@media screen and (min-width: 700px) {
+    .header .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav-toggle{
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+        height: auto;
+    }
+
+    .nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-list + .nav-list{
+        margin-left: 20px;
+    }
+    
+    .nav-link{
+        font-size: 1.125rem;
+    }
+
+    .hero-text{
+        align-self: center;
+    }
+    .second-section__b .row{
+        display: flex;
+    }
+
+    .article + .article{
+        margin-top: unset;
+        margin-left: 10px;
+    }
+
+    .article{
+        width: 100%;
+    }
+
+    .footer-content .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-content .row section{
+        width: 100%;
+    }
+
+    .footer-content .row section + section{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+     .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero h1{
+        font-size: 5rem;
+    }
+
+    .hero-text, .hero-link{
+        font-size: 1.5rem;
+    }
+
+    .hero-text{
+        margin-left: 30px;
+        align-self: flex-end;
+        margin-bottom: 1em;
+    }
+
+    .first-section section + section{
+        margin-left: 30px;
+    }
+
+    .second-section__b .row{
+        flex-direction: column;
+    }
+
+    .second-section__b{
+        margin-left: 20px;
+    }
+
+    .article + .article{
+        margin-left: unset;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .hero h1{
+        font-size: 4.5rem;
+    }
+
+    .second-section__b {
+        margin-left: 80px;
+    }
+
+    .footer-content .row section + section{
+        margin-left: 100px;
+    }
+}
